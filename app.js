@@ -73,6 +73,9 @@ function calcularResultado() {
                 }
                 iteraciones++;
             }
+            if(iteraciones >= 1000) { // Validacion de la cantidad de iteraciones que se hacen
+                neurona.train(2000, entradas, salidas);
+            }
             document.getElementById("iteraciones").innerText = iteraciones; // Actualizar el número de iteraciones en la interfaz visual
         },
         ajustePesos: function(error, currentEntrada){
